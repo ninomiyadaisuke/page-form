@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 import { DesktopIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
-const ThemeSwticher = () => {
+const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -30,4 +30,4 @@ const ThemeSwticher = () => {
   );
 };
 
-export default ThemeSwticher;
+export default ThemeSwitcher;
