@@ -44,8 +44,7 @@ const CreateFormBtn = () => {
         title: "Success",
         description: "Form created successfully",
       });
-      console.log("FORM ID", formId);
-      
+      router.push(`/builder/${formId}`);
     } catch (error) {
       toast({
         title: "Error",
