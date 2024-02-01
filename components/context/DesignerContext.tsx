@@ -11,6 +11,7 @@ import {
 
 type DesignerContextType = {
   elements: FormElementInstance[];
+  setElements: Dispatch<SetStateAction<FormElementInstance[]>>;
   addElement: (index: number, element: FormElementInstance) => void;
   removeElement: (index: string) => void;
 
@@ -32,8 +33,6 @@ export default function DesignerContextProvider({
     useState<FormElementInstance | null>(null);
 
   const addElement = (index: number, element: FormElementInstance) => {
-    console.log(index);
-    
     setElements((prev) => {
       const newElements = [...prev];
       newElements.splice(index, 0, element);
@@ -60,6 +59,7 @@ export default function DesignerContextProvider({
         elements,
         addElement,
         removeElement,
+        setElements,
         selectedElement,
         setSelectedElement,
         updateElement,
