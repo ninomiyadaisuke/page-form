@@ -32,6 +32,8 @@ export default function DesignerContextProvider({
     useState<FormElementInstance | null>(null);
 
   const addElement = (index: number, element: FormElementInstance) => {
+    console.log(index);
+    
     setElements((prev) => {
       const newElements = [...prev];
       newElements.splice(index, 0, element);
