@@ -1,4 +1,4 @@
-import { GetFormById } from "@/actions/form";
+import { GetFormById, GetFormWithSubmissions } from "@/actions/form";
 import FormBuilder from "@/components/FormBuilder";
 import FormLinkShare from "@/components/FormLinkShare";
 import VisitBtn from "@/components/VisitBtn";
@@ -80,8 +80,24 @@ async function FormDetailPage({
           className="shadow-md shadow-red-600"
         />
       </div>
+      <div className="container pt-10">
+        <SubmissionsTable id={form.id} />
+      </div>
     </>
   );
 }
 
 export default FormDetailPage;
+
+type Row = { [key: string]: string } & {
+  submittedAt: Date;
+};
+
+async function SubmissionsTable({ id }: { id: number }) {
+  const form = await GetFormWithSubmissions(id);
+
+  // if (!form) {
+  //   throw new Error("form not found");
+  // }
+  return <h1 className="text-2xl font-bold my-4">Submissions</h1>;
+}
