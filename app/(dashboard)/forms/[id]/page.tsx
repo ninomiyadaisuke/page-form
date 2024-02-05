@@ -118,8 +118,8 @@ async function SubmissionsTable({ id }: { id: number }) {
       case "TextField":
         columns.push({
           id: element.id,
-          label: element.extraAttributes.label,
-          required: element.extraAttributes.required,
+          label: element.extraAttributes?.label,
+          required: element.extraAttributes?.required,
           type: element.type,
         });
         break;
