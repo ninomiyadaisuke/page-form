@@ -122,8 +122,6 @@ export async function PublishForm(id: number) {
     throw new UserNotFoundErr();
   }
 
-  console.log("publishing form", id);
-
   return await prisma.form.update({
     data: {
       published: true,

@@ -142,4 +142,3 @@ const FormBuilder = ({ form }: { form: Form }) => {
 };
 
 export default FormBuilder;
-

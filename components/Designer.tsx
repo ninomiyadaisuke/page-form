@@ -38,7 +38,6 @@ const Designer = () => {
     onDragEnd: (event: DragEndEvent) => {
       const { active, over } = event;
       if (!active || !over) return;
-
       // First scenario
       const isDesignerBtnElement = active.data?.current?.isDesignerBtnElement;
       const isDroppingOverDesignerDropArea =
@@ -48,6 +47,7 @@ const Designer = () => {
         isDesignerBtnElement && isDroppingOverDesignerDropArea;
 
       if (droppingSidebarBtnOverDesignerDropArea) {
+
         const type = active.data.current?.type;
         const newElement = FormElements[type as ElementsType].construct(
           idGenerator()
