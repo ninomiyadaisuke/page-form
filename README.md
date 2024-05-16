@@ -3,10 +3,10 @@ src/
 │   ├── layout.tsx
 │   ├── page.tsx
 │   └── globals.css
-├── features/　test
+├── features/
 │   └── example/
 │       ├── index.tsx
-│       ├── types/ test
+│       ├── types/
 │       │   └── index.ts
 │       ├── schema/
 │       │   └── index.ts
